@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List </title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Todo List Saya</h1>
+        
+        <!-- Ini bagian form input -->
+        <form id="todoForm" class="input-form">
+            <input 
+                type="text" 
+                id="todoInput" 
+                class="todo-input" 
+                placeholder="Tambahkan tugas ....." 
+                required
+            >
+            <input 
+                type="date" 
+                id="dateInput" 
+                class="date-input" 
+                required
+            >
+            <button type="submit" class="btn-add">+</button>
+        </form>
+
+        <!-- Ini bagian filter dan delete-->
+        <div class="action-section">
+            <button class="btn-filter" id="filterBtn">FILTER</button>
+            <button class="btn-delete-all" id="deleteAllBtn">HAPUS</button>
+        </div>
+
+        <!-- Ini Bagian Filter Dropdown  -->
+        <div class="filter-dropdown" id="filterDropdown">
+            <button class="filter-option" data-filter="all">All</button>
+            <button class="filter-option" data-filter="complete">Complete</button>
+            <button class="filter-option" data-filter="incomplete">Incomplete</button>
+        </div>
+
+        <!-- Ini bagian Table Header -->
+        <div class="table-header">
+            <div class="column-task">TUGAS</div>
+            <div class="column-date">TANGGAL TENGGAT</div>
+            <div class="column-status">STATUS</div>
+            <div class="column-actions">TINDAKAN</div>
+        </div>
+
+        <!-- Ini bagian Container -->
+        <div id="todoList" class="todo-list">
+          <p class="empty-message">No task dound</p>
+        </div>
+    </div>
+        <!-- Ini bagian javascript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
